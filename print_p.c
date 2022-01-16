@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 20:32:10 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/16 21:17:34 by yschecro         ###   ########.fr       */
+/*   Created: 2022/01/16 20:47:06 by yschecro          #+#    #+#             */
+/*   Updated: 2022/01/16 21:02:29 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_c(va_list args)
+int	print_p(va_list arg)
 {
-	char	c;
+	long	nb;
 
-	c = va_arg(arg, char);
-	return (write(1, &c, 1));
+	nb = va_arg(arg, long);
+	if (!nb)
+		return (write(1, "(null)", 6));
+	write(1, "0x", 1);
+	return (ft_putnbr_hexa(nb) + 2);
 }

@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_s.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 20:32:10 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/16 21:17:34 by yschecro         ###   ########.fr       */
+/*   Created: 2022/01/16 20:31:21 by yschecro          #+#    #+#             */
+/*   Updated: 2022/01/16 20:31:41 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_c(va_list args)
+int	printf_str(va_list arg)
 {
-	char	c;
-
-	c = va_arg(arg, char);
-	return (write(1, &c, 1));
+	char	*str;
+	
+	str = va_arg(arg, char *);
+	if (!str)
+		return (write(1, "(null)", 6));
+	return (write(1, &str, ft_strlen(str)));
 }

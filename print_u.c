@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 20:32:10 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/16 21:17:34 by yschecro         ###   ########.fr       */
+/*   Created: 2022/01/16 21:07:57 by yschecro          #+#    #+#             */
+/*   Updated: 2022/01/16 21:09:58 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_c(va_list args)
+int	print_c(va_list arg)
 {
-	char	c;
+	long	nb;
 
-	c = va_arg(arg, char);
-	return (write(1, &c, 1));
+	nb = va_arg(arg, long);
+	return (print_s(ft_itoa(nb)));
 }
