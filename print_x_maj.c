@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_x_maj.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 20:32:10 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/24 10:45:36 by yschecro         ###   ########.fr       */
+/*   Created: 2022/01/19 15:02:14 by yschecro          #+#    #+#             */
+/*   Updated: 2022/01/19 15:02:44 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_c(va_list arg)
+int	print_x_maj(va_list arg)
 {
-	char	c;
+	int	nb;
 
-	c = va_arg(arg, int);
-	return (write(1, &c, 1));
+	nb = va_arg(arg, int);
+	return (ft_putnbr_hexa_maj(nb));
 }

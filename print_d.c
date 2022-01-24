@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:15:35 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/16 21:15:36 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/24 12:21:41 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 int	print_d(va_list arg)
 {
-	int	n;
+	int		n;
+	char	*str;
+	int		len;
 
 	n = va_arg(arg, int);
-	return (print_s(ft_itoa(nbr)));
+	str = ft_itoa(n);
+	len = ft_strlen(str);
+	write(1, str, len);
+	return (free(str), len);
 }

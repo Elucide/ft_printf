@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:14:56 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/16 21:14:58 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/24 11:25:46 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static long	len_n(long n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	char	*out;
 	long	len;
