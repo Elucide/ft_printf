@@ -11,7 +11,7 @@ SRCS		=	ft_itoa.c			\
 			  	print_s.c			\
 			   	print_x_maj.c		\
 
-NAME		=	libftprintf.a
+NAME		= 	libftprintf.a
 
 OBJ			=	$(SRCS:.c=.o)
 

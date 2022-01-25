@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:32:10 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/24 10:45:36 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/25 17:05:29 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	print_c(va_list arg)
 {
-	char	c;
+	char	*c;
 
-	c = va_arg(arg, int);
+	c = va_arg(arg, char *);
 	return (write(1, &c, 1));
 }
