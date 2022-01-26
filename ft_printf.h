@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:17:14 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/24 11:25:25 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/26 16:25:09 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 # include <stdio.h>
 
 int		print_arg(va_list arg, char c);
-int		ft_printf(char *str, ...);
+int		ft_printf(const char *str, ...);
 int		ft_putstr(char *str);
-int		ft_putnbr_hexa(long nb);
-int		ft_putnbr_hexa_maj(long nb);
+int		ft_putnbr_hexa(long long nb);
+int		ft_putnbr_hexa_maj(long long nb);
 int		ft_strlen(char *str);
 int		print_c(va_list arg);
 int		print_d(va_list arg);

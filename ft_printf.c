@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:17:00 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/24 11:54:50 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/26 14:56:30 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	print_arg(va_list arg, char c)
 	else if (c == 'd')
 		out = print_d(arg);
 	else if (c == 'i')
-		out = print_c(arg);
+		out = print_d(arg);
 	else if (c == 'u')
 		out = print_d(arg);
 	else if (c == 'x')
@@ -40,7 +40,7 @@ int	print_arg(va_list arg, char c)
 	return (out);
 }
 
-int	ft_printf(char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	arg;
 	int		i;

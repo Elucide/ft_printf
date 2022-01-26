@@ -6,17 +6,19 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:51:31 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/24 11:12:26 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/26 16:37:32 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_hexa(long nb)
+int	ft_putnbr_hexa(long long nb)
 {
 	char	*hexa;
-	int		out;
+	long	out;
 
+	if (nb < -9223372036854775807)
+		return (write(1, "8000000000000000", 16));
 	out = 0;
 	if (nb < 0)
 	{
@@ -31,11 +33,13 @@ int	ft_putnbr_hexa(long nb)
 	return (out);
 }
 
-int	ft_putnbr_hexa_maj(long nb)
+int	ft_putnbr_hexa_maj(long long nb)
 {
 	char	*hexa;
-	int		out;
+	long	out;
 
+	if (nb < -9223372036854775807)
+		return (write(1, "8000000000000000", 16));
 	out = 0;
 	if (nb < 0)
 	{
