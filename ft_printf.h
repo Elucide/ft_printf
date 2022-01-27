@@ -6,7 +6,7 @@
 /*   By: yschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:17:14 by yschecro          #+#    #+#             */
-/*   Updated: 2022/01/26 16:25:09 by yschecro         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:24:50 by yschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_putnbr_hexa_maj(long long nb);
 int		ft_strlen(char *str);
 int		print_c(va_list arg);
 int		print_d(va_list arg);
+int		print_u(va_list arg);
 int		print_p(va_list arg);
 int		print_pc(void);
 int		print_s(va_list arg);
@@ -35,5 +36,6 @@ int		print_c(va_list arg);
 int		print_x(va_list arg);
 int		print_x_maj(va_list arg);
 char	*ft_itoa(long n);
+char	*ft_utoa(unsigned int n);
 
 #endif

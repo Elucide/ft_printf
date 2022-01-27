@@ -1,4 +1,5 @@
 SRCS		=	ft_itoa.c			\
+				ft_utoa.c			\
 				ft_printf.c			\
 				ft_putnbr_hexa.c	\
 				ft_strlen.c			\
@@ -7,6 +8,7 @@ SRCS		=	ft_itoa.c			\
 		   		print_x.c			\
 				print_d.c			\
 				print_c.c			\
+				print_u.c			\
 			 	print_p.c			\
 			  	print_s.c			\
 			   	print_x_maj.c		\
